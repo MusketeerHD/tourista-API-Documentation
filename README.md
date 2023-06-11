@@ -12,7 +12,7 @@
 
 ## Documentation
 
-Our API is Deployed! You can simply click link down below!
+Our API is Deployed! For the Documentation and how to use it, you can simply click link down below!
 
 ### [Tourista API](https://tourista-apps-bmvl7h45tq-et.a.run.app/)
 
