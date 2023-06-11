@@ -10,6 +10,11 @@
 
 ### ✨ [Demo](https://github.com/Six-Kizuki-to-the-moon/tourista-api)
 
+## Documentation
+
+Our API is Deployed! You can simply click link down below!
+https://tourista-apps-bmvl7h45tq-et.a.run.app/
+
 ## Author
 
 👤 **Six Kizuki**
@@ -19,9 +24,3 @@
 ## Show your support
 
 Give a ⭐️ if this project helped you!
-
-<<<<<<< HEAD
-***
-=======
-***
->>>>>>> 7d25e74ea4437c6789266824fae663e556aec740
