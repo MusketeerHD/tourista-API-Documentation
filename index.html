@@ -237,6 +237,89 @@
             </ul>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="#Trip_API">Trip API</a>
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link" href="#getTripById">getTripById</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#createTrip">createTrip</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#updateTrip">updateTrip</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#deleteTrip">deleteTrip</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#uploadTripImage">uploadTripImage</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#TripDetail_API">TripDetail API</a>
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link" href="#getTripDetailById">getTripDetailById</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#createTripDetail">createTripDetail</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#updateTripDetail">updateTripDetail</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#deleteTripDetail">deleteTripDetail</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#deleteTripDetailByIdAndTripType">deleteTripDetailByIdAndTripType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Destination_API">Destination API</a>
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link" href="#getAllDestination">getAllDestination</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#getDestinationById">getDestinationById</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#createDestination">createDestination</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#updateDestination">updateDestination</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#deleteDestination">deleteDestination</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#uploadDestinationImage">uploadDestinationImage</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#ReviewWisata_API">ReviewWisata API</a>
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link" href="#getAllReviewsByPlace">getAllReviewsByPlace</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#getAllReviewsById">getAllReviewsById</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#createReview">createReview</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#updateReview">updateReview</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#deleteReview">deleteReview</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="#tourista_table">All Table Models</a>
             <ul class="nav flex-column">
               <li class="nav-item">
@@ -346,7 +429,7 @@
             <div class="row">
               <div class="col-sm-6 col-lg-4">
                 <ul class="list-unstyled">
-                  <li><strong>Version:</strong> 1.1</li>
+                  <li><strong>Version:</strong> 1.2</li>
                   <li><strong>Author:</strong> <a href="https://github.com/Six-Kizuki-to-the-moon">Six Kizuki</a></li>
                 </ul>
               </div>
@@ -356,7 +439,7 @@
                     <strong class="font-weight-700">Created:</strong> 17 May,
                     2023
                   </li>
-                  <li><strong>Update:</strong> 11 June, 2023</li>
+                  <li><strong>Updated:</strong> 14 June, 2023</li>
                 </ul>
               </div>
             </div>
@@ -405,7 +488,7 @@
             <p style="text-align: justify;">
               If you encounter any issues, have questions, or need further
               assistance, our dedicated support team is here to help. Feel
-              free to reach out to us at support@tourista.com, and we'll
+              free to reach out to us at <a href="https://github.com/Six-Kizuki-to-the-moon">github : Six Kizuki to the moon</a>, and we'll
               respond promptly to ensure your integration journey is smooth
               and successful.Once again, we're thrilled to have you on board. Let's embark on
               this exciting journey together and create exceptional travel
@@ -624,7 +707,7 @@
               This will run the application locally on
               <code>http://localhost:5000</code>. Dont forget to create
               database first on your local machine, db name is
-              <code>auth_db</code> or change it by yourself in
+              <code>tourista_db</code> or change it by yourself in
               <code>config/Database.js</code>
             </p>
           </section>
@@ -752,7 +835,12 @@
                 <ol class="c">
                   <li>
                     If Response Success :
-                    <code>"msg": "Login Successful"</code>
+                    <pre><code>{
+                      "msg": "Login successful",
+                      "username": "musketeer",
+                      "email": "musketeer@gmail.com",
+                      "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoibXVza2V0ZWVyIiwiZW1haWwiOiJtdXNrZXRlZXJAZ21haWwuY29tIiwiaWF0IjoxNjg2NjcwMzg0LCJleHAiOjE2ODY2NzA0MDR9.EnQrSltOsd7WzqpuLMe-rO13PrfXjkupV83G3NLyqRA"
+                  }</code></pre>
                   </li>
                   <li>
                     If Email is not Registered or Wrong :
@@ -786,8 +874,8 @@
                 <ol class="c">
                   <li>
                     If Response Success : "Example"
-                    <code>"accessToken":
-                        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoibXVza2V0ZWVyIiwiZW1haWwiOiJtdXNrZXRlZXJAZ21haWwuY29tIiwiaWF0IjoxNjg2MDUyODMxLCJleHAiOjE2ODYxMzkyMzF9.gNgZ6tajVl9OVDUYcHp5IatNx_yJj7V-yScDXDVdhW0"</code>
+                    <pre><code>"accessToken":
+                        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoibXVza2V0ZWVyIiwiZW1haWwiOiJtdXNrZXRlZXJAZ21haWwuY29tIiwiaWF0IjoxNjg2MDUyODMxLCJleHAiOjE2ODYxMzkyMzF9.gNgZ6tajVl9OVDUYcHp5IatNx_yJj7V-yScDXDVdhW0"</code></pre>
                   </li>
                   <li>If Response Fail : <code>"msg": "Forbidden"</code></li>
                 </ol>
@@ -844,10 +932,9 @@
           <!-- Typography
 		============================ -->
           <section id="idocs_typography">
-            <h2>Get User By Profile Id</h2>
+            <h2>Get User By Profile Username</h2>
             <p class="text-4">
-              Retrieve the user profile information by providing the user's
-              ID.
+              Retrieve the user profile information by providing the username
             </p>
             <ul>
               <li>URL = <code>'/users/:id'</code></li>
@@ -865,10 +952,10 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td scope="row"><code>'id'</code></td>
+                      <td scope="row"><code>'username'</code></td>
                       <td><code>'STRING'</code></td>
                       <td><code>Yes</code></td>
-                      <td><code>The ID of the user profile</code></td>
+                      <td><code>The username of the user profile</code></td>
                     </tr>
                   </tbody>
                 </table>
@@ -1154,6 +1241,1141 @@
                     <code>"message": "No file uploaded"</code>
                   </li>
                   <li>If Response Fail : <code>"msg": "Forbidden"</code></li>
+                </ol>
+              </li>
+            </ul>
+          </section>
+
+          <hr class="divider" />
+
+          <section id="Trip_API">
+            <h2><strong>Trip API</strong></h2>
+            <p class="lead mb-5">
+              This documentation provides an overview of the Tourista API's Trip controller and its associated routes. The Trip controller handles operations related to trips in the Tourista application, including retrieving, creating, updating, and deleting trips.
+            </p>
+            <p class="lead mb-5">
+              The Trip controller is responsible for managing trips within the Tourista API.
+            </p>
+          </section>
+
+          <hr class="divider" />
+
+          <section id="getTripById">
+            <h2>getTripById</h2>
+            <p class="text-4">
+              Retrieve a trip by providing its ID.
+            </p>
+            <ul>
+              <li>URL = <code>'/trip/:id'</code></li>
+              <li>Method = <code>GET</code></li>
+              <li>
+                Request Body =
+                <table class="table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Parameter</th>
+                      <th scope="col">Type</th>
+                      <th scope="col">Required</th>
+                      <th scope="col">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td scope="row"><code>'id'</code></td>
+                      <td><code>'INTEGER'</code></td>
+                      <td><code>Yes</code></td>
+                      <td><code>The ID of the trip</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </li>
+              <li>
+                Response Format =
+                <ol class="c">
+                  <li>
+                    If Response Success :
+                    <pre><code>{
+                      "id": 1,
+                      "trip_name": "Bronze Package Trip",
+                      "trip_detail": "This is a description of my trip",
+                      "trip_image": null,
+                      "use_lodging": null,
+                      "createdAt": "2023-06-12T16:23:14.000Z",
+                      "updatedAt": "2023-06-12T16:23:14.000Z"
+                  }</code></pre>
+                  </li>
+                  <li>If Response Fail : <code>"msg": "Forbidden"</code></li>
+                </ol>
+              </li>
+            </ul>
+          </section>
+
+          <hr class="divider" />
+
+          <section id="createTrip">
+            <h2>createTrip</h2>
+            <p class="text-4">
+              Create a new trip.
+            </p>
+            <ul>
+              <li>URL = <code>'/trip'</code></li>
+              <li>Method = <code>POST</code></li>
+              <li>
+                Request Body =
+                <table class="table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Parameter</th>
+                      <th scope="col">Type</th>
+                      <th scope="col">Required</th>
+                      <th scope="col">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td scope="row"><code>'trip_name'</code></td>
+                      <td><code>'STRING'</code></td>
+                      <td><code>Yes</code></td>
+                      <td><code>The name of the trip</code></td>
+                    </tr>
+                    <tr>
+                      <td scope="row"><code>'trip_detail'</code></td>
+                      <td><code>'STRING'</code></td>
+                      <td><code>Yes</code></td>
+                      <td><code>The detail of the trip</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </li>
+              <li>
+                Response Format =
+                <ol class="c">
+                  <li>
+                    If Response Success :
+                    <pre><code>{
+                      "id": 1,
+                      "trip_name": "Bronze Package Trip",
+                      "trip_detail": "This is a description of my trip",
+                      "updatedAt": "2023-06-12T16:23:14.344Z",
+                      "createdAt": "2023-06-12T16:23:14.344Z"
+                  }</code></pre>
+                  </li>
+                  <li>If Response Fail : <code>"msg": "Forbidden"</code></li>
+                </ol>
+              </li>
+            </ul>
+          </section>
+
+          <hr class="divider" />
+
+          <section id="updateTrip">
+            <h2>updateTrip</h2>
+            <p class="text-4">
+              Update an existing trip.
+            </p>
+            <ul>
+              <li>URL = <code>'/trip'</code></li>
+              <li>Method = <code>PUT</code></li>
+              <li>
+                Request Body =
+                <table class="table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Parameter</th>
+                      <th scope="col">Type</th>
+                      <th scope="col">Required</th>
+                      <th scope="col">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td scope="row"><code>'trip_name'</code></td>
+                      <td><code>'STRING'</code></td>
+                      <td><code>Yes</code></td>
+                      <td><code>The name of the trip</code></td>
+                    </tr>
+                    <tr>
+                      <td scope="row"><code>'trip_detail'</code></td>
+                      <td><code>'STRING'</code></td>
+                      <td><code>Yes</code></td>
+                      <td><code>The detail of the trip</code></td>
+                    </tr>
+                    <tr>
+                      <td scope="row"><code>'use_lodging'</code></td>
+                      <td><code>'tinyint'</code></td>
+                      <td><code>Yes</code></td>
+                      <td><code>The lodging used of the trip</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </li>
+              <li>
+                Response Format =
+                <ol class="c">
+                  <li>
+                    If Response Success :
+                      <code>{
+                      "msg": "Trip updated successfully"
+                  }</code>
+                  </li>
+                  <li>If there is no trip :
+                    <code>{
+                      "msg": "Trip not found"
+                  }</code>
+                  </li>
+                  <li>If Response Fail : <code>"msg": "Forbidden"</code></li>
+                </ol>
+              </li>
+            </ul>
+          </section>
+
+          <hr class="divider" />
+
+          <section id="deleteTrip">
+            <h2>deleteTrip</h2>
+            <p class="text-4">
+              Delete a trip by its ID.
+            </p>
+            <ul>
+              <li>URL = <code>'/trip/:id'</code></li>
+              <li>Method = <code>DELETE</code></li>
+              <li>
+                Response Format =
+                <ol class="c">
+                  <li>
+                    If Response Success :
+                    <code>{
+                      "msg": "Trip deleted successfully"
+                  }</code>
+                  </li>
+                  <li>If there is no trip : 
+                    <code>{
+                      "msg": "Trip not found"
+                  }</code>
+                  </li>
+                  <li>If Response Fail : <code>"msg": "Forbidden"</code></li>
+                </ol>
+              </li>
+            </ul>
+          </section>
+
+          <hr class="divider" />
+
+          <section id="uploadTripImage">
+            <h2>uploadTripImage </h2>
+            <p class="text-4">
+              Upload an image for a specific trip.
+            </p>
+            <ul>
+              <li>URL = <code>'/trip/:id/uploadImage'</code></li>
+              <li>Method = <code>POST</code></li>
+              <li>
+                Request Body =
+                <table class="table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Parameter</th>
+                      <th scope="col">Type</th>
+                      <th scope="col">Required</th>
+                      <th scope="col">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td scope="row"><code>'file'</code></td>
+                      <td><code>'FILE'</code></td>
+                      <td><code>Yes</code></td>
+                      <td><code>The file that upload trip image</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </li>
+              <li>
+                Response Format =
+                <ol class="c">
+                  <li>
+                    If Response Success :
+                    <pre><code>{
+                      "message": "File uploaded and trip image updated successfully",
+                      "fileUrl": "https://storage.googleapis.com/tourista-test.appspot.com/trip_image/trip_1_mikasa.jpg"
+                  }</code></pre>
+                  </li>
+                  <li>
+                    If there is no files in there :
+                    <code>"message": "No file uploaded"</code>
+                  </li>
+                  <li>If Response Fail : <code>"msg": "Forbidden"</code></li>
+                </ol>
+              </li>
+            </ul>
+          </section>
+
+          <hr class="divider" />
+
+          <section id="TripDetail_API">
+            <h2><strong>TripDetail API</strong></h2>
+            <p class="lead mb-5">
+              This documentation provides an overview of the Tourista API's TripDetail controller and its associated routes. The TripDetail controller handles operations related to trip details in the Tourista application, including retrieving, creating, updating, and deleting trip details.
+            </p>
+            <p class="lead mb-5">
+              The TripDetail controller is responsible for managing trip details within the Tourista API.
+            </p>
+          </section>
+
+          <hr class="divider" />
+
+          <section id="getTripDetailById">
+            <h2>getTripDetailById</h2>
+            <p class="text-4">
+              Retrieve trip details by providing the trip ID.
+            </p>
+            <ul>
+              <li>URL = <code>'trip/detail/:id'</code></li>
+              <li>Method = <code>GET</code></li>
+              <li>
+                Request Body =
+                <table class="table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Parameter</th>
+                      <th scope="col">Type</th>
+                      <th scope="col">Required</th>
+                      <th scope="col">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td scope="row"><code>'id'</code></td>
+                      <td><code>'INTEGER'</code></td>
+                      <td><code>Yes</code></td>
+                      <td><code>The ID of the trip</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </li>
+              <li>
+                Response Format =
+                <ol class="c">
+                  <li>
+                    If Response Success :
+                    <pre><code>[
+                      {
+                          "user_id": 1,
+                          "trip_name_type": "Bronze Package Trip",
+                          "name_wisata": "Ancol",
+                          "visited": false,
+                          "createdAt": "2023-06-12T17:33:12.000Z",
+                          "updatedAt": "2023-06-12T17:33:12.000Z",
+                          "user_profile": {
+                              "name": "Azfa jett"
+                          },
+                          "trip": {
+                              "trip_name": "Bronze Package Trip"
+                          },
+                          "destination": {
+                              "name_wisata": "Ancol"
+                          }
+                      }
+                  ]</code></pre>
+                  </li>
+                  <li>If Response Fail : <code>"msg": "Internal Server Error"</code></li>
+                </ol>
+              </li>
+            </ul>
+          </section>
+
+          <hr class="divider" />
+
+          <section id="createTripDetail">
+            <h2>createTripDetail</h2>
+            <p class="text-4">
+              Create a new trip detail.
+            </p>
+            <ul>
+              <li>URL = <code>'/trip/detail/create'</code></li>
+              <li>Method = <code>POST</code></li>
+              <li>
+                Request Body =
+                <table class="table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Parameter</th>
+                      <th scope="col">Type</th>
+                      <th scope="col">Required</th>
+                      <th scope="col">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td scope="row"><code>'user_id'</code></td>
+                      <td><code>'INTEGER'</code></td>
+                      <td><code>Yes</code></td>
+                      <td><code>The ID of the user trip</code></td>
+                    </tr>
+                    <tr>
+                      <td scope="row"><code>'trip_name_type'</code></td>
+                      <td><code>'STRING'</code></td>
+                      <td><code>Yes</code></td>
+                      <td><code>The type/category of the trip detail</code></td>
+                    </tr>
+                    <tr>
+                      <td scope="row"><code>'name_wisata'</code></td>
+                      <td><code>'STRING'</code></td>
+                      <td><code>Yes</code></td>
+                      <td><code>The name of the trip detail</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </li>
+              <li>
+                Response Format =
+                <ol class="c">
+                  <li>
+                    If Response Success :
+                    <pre><code>{
+                      "visited": false,
+                      "user_id": "1",
+                      "trip_name_type": "Bronze Package Trip",
+                      "name_wisata": "Ancol",
+                      "updatedAt": "2023-06-12T17:33:12.144Z",
+                      "createdAt": "2023-06-12T17:33:12.144Z"
+                  }</code></pre>
+                  </li>
+                  <li>If Response Fail : <code>"msg": "Internal Server Error"</code></li>
+                </ol>
+              </li>
+            </ul>
+          </section>
+
+          <hr class="divider" />
+
+          <section id="updateTripDetail">
+            <h2>updateTripDetail</h2>
+            <p class="text-4">
+              Update an existing trip detail.
+            </p>
+            <ul>
+              <li>URL = <code>'/trip/detail/:id/:trip_name_type/:name_wisata'</code></li>
+              <li>Method = <code>PUT</code></li>
+              <li>
+                Request Body =
+                <table class="table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Parameter</th>
+                      <th scope="col">Type</th>
+                      <th scope="col">Required</th>
+                      <th scope="col">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td scope="row"><code>'visited'</code></td>
+                      <td><code>'tinyint'</code></td>
+                      <td><code>Yes</code></td>
+                      <td><code>The user visited</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </li>
+              <li>
+                Response Format =
+                <ol class="c">
+                  <li>
+                    If Response Success :
+                    <code>{
+                      "msg": "Trip Detail updated successfully"
+                  }</code>
+                  </li>
+                  <li>If Response Fail : <code>"msg": "Internal Server Error"</code></li>
+                </ol>
+              </li>
+            </ul>
+          </section>
+
+          <hr class="divider" />
+
+          <section id="deleteTripDetail">
+            <h2>deleteTripDetail</h2>
+            <p class="text-4">
+              Delete a trip detail by its ID.
+            </p>
+            <ul>
+              <li>URL = <code>'/trip/detail/:id'</code></li>
+              <li>Method = <code>DELETE</code></li>
+              <li>
+                Response Format =
+                <ol class="c">
+                  <li>
+                    If Response Success :
+                    <code>{
+                      "msg": "Trip Detail deleted successfully"
+                  }</code>
+                  </li>
+                  <li>If there is no destination : 
+                    <code>{
+                      "msg": "Trip Detail not found"
+                  }</code>
+                  </li>
+                  <li>If Response Fail : <code>"msg": "Internal Server Error"</code></li>
+                </ol>
+              </li>
+            </ul>
+          </section>
+
+          <hr class="divider" />
+
+          <section id="deleteTripDetailByIdAndTripType">
+            <h2>deleteTripDetailByIdAndTripType</h2>
+            <p class="text-4">
+              Delete a trip detail by its ID and trip type.
+            </p>
+            <ul>
+              <li>URL = <code>'/trip/detail/:id/:trip_name_type'</code></li>
+              <li>Method = <code>DELETE</code></li>
+              <li>
+                Response Format =
+                <ol class="c">
+                  <li>
+                    If Response Success :
+                    <code>{
+                      "msg": "Trip Detail deleted successfully"
+                  }</code>
+                  </li>
+                  <li>If there is no destination : 
+                    <code>{
+                      "msg": "Trip Detail not found"
+                  }</code>
+                  </li>
+                  <li>If Response Fail : <code>"msg": "Internal Server Error"</code></li>
+                </ol>
+              </li>
+            </ul>
+          </section>
+
+          <hr class="divider" />
+
+          <section id="Destination_API">
+            <h2><strong>Destination API</strong></h2>
+            <p class="lead mb-5">
+              This documentation provides an overview of the Tourista API's Destination controller and its associated routes. The Destination controller handles operations related to destinations in the Tourista application, including retrieving, creating, updating, and deleting destinations.
+            </p>
+            <p class="lead mb-5">
+              The Destination controller is responsible for managing destinations within the Tourista API.
+            </p>
+          </section>
+
+          <hr class="divider" />
+
+          <section id="getAllDestination">
+            <h2>getAllDestination</h2>
+            <p class="text-4">
+              Retrieve all destinations.
+            </p>
+            <ul>
+              <li>URL = <code>'/destination'</code></li>
+              <li>Method = <code>GET</code></li>
+              <li>
+                Response Format =
+                <ol class="c">
+                  <li>
+                    If Response Success :
+                    <pre><code>[
+                      {
+                          "id": 5,
+                          "name_wisata": "Ancol",
+                          "description_wisata": "Kota Jakarta",
+                          "category": "Perkotaaan",
+                          "destination_photo": null,
+                          "city": "Jakarta",
+                          "price": 1000000,
+                          "rating": 4.5,
+                          "time_minutes": 120,
+                          "coordinate": "123.456,789.012",
+                          "destination_lat": 12.345,
+                          "destination_long": 67.89
+                      }
+                  ]</code></pre>
+                  </li>
+                  <li>If Response Fail : <code>"msg": "Internal Server Error"</code></li>
+                </ol>
+              </li>
+            </ul>
+          </section>
+
+          <hr class="divider" />
+
+          <section id="getDestinationById">
+            <h2>getDestinationById</h2>
+            <p class="text-4">
+              Retrieve a destination by providing its ID.
+            </p>
+            <ul>
+              <li>URL = <code>'/destination/:id'</code></li>
+              <li>Method = <code>GET</code></li>
+              <li>
+                Request Body =
+                <table class="table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Parameter</th>
+                      <th scope="col">Type</th>
+                      <th scope="col">Required</th>
+                      <th scope="col">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td scope="row"><code>'id'</code></td>
+                      <td><code>'INTEGER'</code></td>
+                      <td><code>Yes</code></td>
+                      <td><code>The ID of the trip</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </li>
+              <li>
+                Response Format =
+                <ol class="c">
+                  <li>
+                    If Response Success :
+                    <pre><code>{
+                      "id": 5,
+                      "name_wisata": "Ancol",
+                      "description_wisata": "Kota Jakarta",
+                      "category": "Perkotaaan",
+                      "destination_photo": null,
+                      "city": "Jakarta",
+                      "price": 1000000,
+                      "rating": 4.5,
+                      "time_minutes": 120,
+                      "coordinate": "123.456,789.012",
+                      "destination_lat": 12.345,
+                      "destination_long": 67.89
+                  }</code></pre>
+                  </li>
+                  <li>If there is no destination : 
+                    <code>{
+                    "msg": "Destination not found"
+                }</code></li>
+                  <li>If Response Fail : <code>"msg": "Internal Server Error"</code></li>
+                </ol>
+              </li>
+            </ul>
+          </section>
+
+          <hr class="divider" />
+
+          <section id="createDestination">
+            <h2>createDestination</h2>
+            <p class="text-4">
+              Create a new destination.
+            </p>
+            <ul>
+              <li>URL = <code>'/destination/create'</code></li>
+              <li>Method = <code>POST</code></li>
+              <li>
+                Request Body =
+                <table class="table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Parameter</th>
+                      <th scope="col">Type</th>
+                      <th scope="col">Required</th>
+                      <th scope="col">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td scope="row"><code>'name_wisata'</code></td>
+                      <td><code>'STRING'</code></td>
+                      <td><code>Yes</code></td>
+                      <td><code>The name of the destination</code></td>
+                    </tr>
+                    <tr>
+                      <td scope="row"><code>'description_wisata'</code></td>
+                      <td><code>'STRING'</code></td>
+                      <td><code>Yes</code></td>
+                      <td><code>Additional description of the destination</code></td>
+                    </tr>
+                    <tr>
+                      <td scope="row"><code>'category'</code></td>
+                      <td><code>'STRING'</code></td>
+                      <td><code>Yes</code></td>
+                      <td><code>The category of the destination</code></td>
+                    </tr>
+                    <tr>
+                      <td scope="row"><code>'city'</code></td>
+                      <td><code>'STRING'</code></td>
+                      <td><code>Yes</code></td>
+                      <td><code>The city of the destination</code></td>
+                    </tr>
+                    <tr>
+                      <td scope="row"><code>'price'</code></td>
+                      <td><code>'DOUBLE'</code></td>
+                      <td><code>Yes</code></td>
+                      <td><code>The city of the destination</code></td>
+                    </tr>
+                    <tr>
+                      <td scope="row"><code>'rating'</code></td>
+                      <td><code>'DOUBLE'</code></td>
+                      <td><code>Yes</code></td>
+                      <td><code>The ratings of the destination</code></td>
+                    </tr>
+                    <tr>
+                      <td scope="row"><code>'time_minutes'</code></td>
+                      <td><code>'DOUBLE'</code></td>
+                      <td><code>Yes</code></td>
+                      <td><code>The ratings of the destination</code></td>
+                    </tr>
+                    <tr>
+                      <td scope="row"><code>'coordinate'</code></td>
+                      <td><code>'STRING'</code></td>
+                      <td><code>Yes</code></td>
+                      <td><code>The coordinate of the destination</code></td>
+                    </tr>
+                    <tr>
+                      <td scope="row"><code>'destination_lat'</code></td>
+                      <td><code>'DOUBLE'</code></td>
+                      <td><code>Yes</code></td>
+                      <td><code>The latitude of the destination</code></td>
+                    </tr>
+                    <tr>
+                      <td scope="row"><code>'destination_lot'</code></td>
+                      <td><code>'DOUBLE'</code></td>
+                      <td><code>Yes</code></td>
+                      <td><code>The longtitude of the destination</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </li>
+              <li>
+                Response Format =
+                <ol class="c">
+                  <li>
+                    If Response Success :
+                    <pre><code>{
+                      "id": 5,
+                      "name_wisata": "Ancol",
+                      "description_wisata": "Kota Jakarta",
+                      "category": "Perkotaaan",
+                      "city": "Jakarta",
+                      "price": "1000000",
+                      "rating": "4.5",
+                      "time_minutes": "120",
+                      "coordinate": "123.456,789.012",
+                      "destination_lat": "12.345",
+                      "destination_long": "67.890"
+                  }</code></pre>
+                  </li>
+                  <li>If Response Fail : <code>"msg": "Internal Server Error"</code></li>
+                </ol>
+              </li>
+            </ul>
+          </section>
+
+          <hr class="divider" />
+
+          <section id="updateDestination">
+            <h2>updateDestination</h2>
+            <p class="text-4">
+              Update an existing destination.
+            </p>
+            <ul>
+              <li>URL = <code>'/destination/:id'</code></li>
+              <li>Method = <code>PUT</code></li>
+              <li>
+                Request Body =
+                <table class="table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Parameter</th>
+                      <th scope="col">Type</th>
+                      <th scope="col">Required</th>
+                      <th scope="col">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td scope="row"><code>'name_wisata'</code></td>
+                      <td><code>'STRING'</code></td>
+                      <td><code>Yes</code></td>
+                      <td><code>The name of the destination</code></td>
+                    </tr>
+                    <tr>
+                      <td scope="row"><code>'description_wisata'</code></td>
+                      <td><code>'STRING'</code></td>
+                      <td><code>Yes</code></td>
+                      <td><code>Additional description of the destination</code></td>
+                    </tr>
+                    <tr>
+                      <td scope="row"><code>'category'</code></td>
+                      <td><code>'STRING'</code></td>
+                      <td><code>Yes</code></td>
+                      <td><code>The category of the destination</code></td>
+                    </tr>
+                    <tr>
+                      <td scope="row"><code>'city'</code></td>
+                      <td><code>'STRING'</code></td>
+                      <td><code>Yes</code></td>
+                      <td><code>The city of the destination</code></td>
+                    </tr>
+                    <tr>
+                      <td scope="row"><code>'price'</code></td>
+                      <td><code>'DOUBLE'</code></td>
+                      <td><code>Yes</code></td>
+                      <td><code>The city of the destination</code></td>
+                    </tr>
+                    <tr>
+                      <td scope="row"><code>'rating'</code></td>
+                      <td><code>'DOUBLE'</code></td>
+                      <td><code>Yes</code></td>
+                      <td><code>The ratings of the destination</code></td>
+                    </tr>
+                    <tr>
+                      <td scope="row"><code>'time_minutes'</code></td>
+                      <td><code>'DOUBLE'</code></td>
+                      <td><code>Yes</code></td>
+                      <td><code>The ratings of the destination</code></td>
+                    </tr>
+                    <tr>
+                      <td scope="row"><code>'coordinate'</code></td>
+                      <td><code>'STRING'</code></td>
+                      <td><code>Yes</code></td>
+                      <td><code>The coordinate of the destination</code></td>
+                    </tr>
+                    <tr>
+                      <td scope="row"><code>'destination_lat'</code></td>
+                      <td><code>'DOUBLE'</code></td>
+                      <td><code>Yes</code></td>
+                      <td><code>The latitude of the destination</code></td>
+                    </tr>
+                    <tr>
+                      <td scope="row"><code>'destination_lot'</code></td>
+                      <td><code>'DOUBLE'</code></td>
+                      <td><code>Yes</code></td>
+                      <td><code>The longtitude of the destination</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </li>
+              <li>
+                Response Format =
+                <ol class="c">
+                  <li>
+                    If Response Success :
+                    <code>{
+                      "msg": "Destination updated successfully"
+                  }</code>
+                  <li>If there is no destination : <code>{
+                    "msg": "Destination not found"
+                }</code></li>
+                  </li>
+                  <li>If Response Fail : <code>"msg": "Internal Server Error"</code></li>
+                </ol>
+              </li>
+            </ul>
+          </section>
+
+          <hr class="divider" />
+
+          <section id="deleteDestination">
+            <h2>deleteDestination</h2>
+            <p class="text-4">
+              Delete a destination by its ID.
+            </p>
+            <ul>
+              <li>URL = <code>'/destination/:id'</code></li>
+              <li>Method = <code>DELETE</code></li>
+              <li>
+                Response Format =
+                <ol class="c">
+                  <li>
+                    If Response Success :
+                    <code>{
+                      "msg": "Destination deleted successfully"
+                  }</code>
+                  </li>
+                  <li>If there is no destination : 
+                    <code>{
+                      "msg": "Destination not found"
+                  }</code>
+                  </li>
+                  <li>If Response Fail : <code>"msg": "Internal Server Error"</code></li>
+                </ol>
+              </li>
+            </ul>
+          </section>
+
+          <hr class="divider" />
+
+          <section id="uploadDestinationImage">
+            <h2>uploadDestinationImage</h2>
+            <p class="text-4">
+              Upload an image for a specific destination.
+            </p>
+            <ul>
+              <li>URL = <code>'/destination/:id/uploadImage'</code></li>
+              <li>Method = <code>POST</code></li>
+              <li>
+                Request Body =
+                <table class="table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Parameter</th>
+                      <th scope="col">Type</th>
+                      <th scope="col">Required</th>
+                      <th scope="col">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td scope="row"><code>'file'</code></td>
+                      <td><code>'FILE'</code></td>
+                      <td><code>Yes</code></td>
+                      <td><code>The file that upload destination image</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </li>
+              <li>
+                Response Format =
+                <ol class="c">
+                  <li>
+                    If Response Success :
+                    <pre><code>{
+                      "message": "File uploaded and destination image updated successfully",
+                      "fileUrl": "https://storage.googleapis.com/tourista-test.appspot.com/destination_detail_image/destination_detail_5_dizzy.jpg"
+                  }</code></pre>
+                  </li>
+                  <li>
+                    If there is no destination :
+                    <code>{
+                      "message": "Destination not found"
+                  }</code>
+                  </li>
+                  <li>If Response Fail : <code>"msg": "Internal Server Error"</code></li>
+                </ol>
+              </li>
+            </ul>
+          </section>
+
+          <hr class="divider" />
+
+          <section id="ReviewWisata_API">
+            <h2><strong>ReviewWisata API</strong></h2>
+            <p class="lead mb-5">
+              This documentation provides an overview of the Tourista API's ReviewWisata controller and its associated routes. The ReviewWisata controller handles operations related to reviews for destinations in the Tourista application, including retrieving reviews, creating new reviews, updating existing reviews, and deleting reviews.
+            </p>
+            <p class="lead mb-5">
+              The ReviewWisata controller is responsible for managing destination reviews within the Tourista API.
+            </p>
+          </section>
+
+          <hr class="divider" />
+
+          <section id="getAllReviewsByPlace">
+            <h2>getAllReviewsByPlace</h2>
+            <p class="text-4">
+              Retrieve all reviews for a specific destination based on the wisata ID.
+            </p>
+            <ul>
+              <li>URL = <code>'/destination/review/place/:wisata_id'</code></li>
+              <li>Method = <code>GET</code></li>
+              <li>
+                Response Format =
+                <ol class="c">
+                  <li>
+                    If Response Success :
+                    <pre><code>[
+                      {
+                          "user_wisata": 1,
+                          "wisata_id": 5,
+                          "wisata_rating": 4.8,
+                          "user_profile": {
+                              "name": "Azfa jett"
+                          },
+                          "destination": {
+                              "name_wisata": "Ancol"
+                          }
+                      }
+                  ]</code></pre>
+                  </li>
+                  <li>If Response Fail : <code>"msg": "Internal Server Error"</code></li>
+                </ol>
+              </li>
+            </ul>
+          </section>
+
+          <hr class="divider" />
+
+          <section id="getAllReviewsById">
+            <h2>getAllReviewsById</h2>
+            <p class="text-4">
+              Retrieve all reviews submitted by a specific user based on the user_wisata parameter.
+            </p>
+            <ul>
+              <li>URL = <code>'/destination/review/user/:user_wisata'</code></li>
+              <li>Method = <code>GET</code></li>
+              <li>
+                Response Format =
+                <ol class="c">
+                  <li>
+                    If Response Success :
+                    <pre><code>[
+                      {
+                          "user_wisata": 1,
+                          "wisata_id": 5,
+                          "wisata_rating": 4.8,
+                          "user_profile": {
+                              "name": "Azfa jett"
+                          },
+                          "destination": {
+                              "name_wisata": "Ancol"
+                          }
+                      }
+                  ]</code></pre>
+                  </li>
+                  <li>If Response Fail : <code>"msg": "Internal Server Error"</code></li>
+                </ol>
+              </li>
+            </ul>
+          </section>
+
+          <hr class="divider" />
+
+          <section id="createReview">
+            <h2>createReview</h2>
+            <p class="text-4">
+              Create a new review for a destination.
+            </p>
+            <ul>
+              <li>URL = <code>'/destination/review/create'</code></li>
+              <li>Method = <code>POST</code></li>
+              <li>
+                Request Body =
+                <table class="table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Parameter</th>
+                      <th scope="col">Type</th>
+                      <th scope="col">Required</th>
+                      <th scope="col">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td scope="row"><code>'user_wisata'</code></td>
+                      <td><code>'INTEGER'</code></td>
+                      <td><code>Yes</code></td>
+                      <td><code>The ID of the user submitting the review</code></td>
+                    </tr>
+                    <tr>
+                      <td scope="row"><code>'wisata_id'</code></td>
+                      <td><code>'INTEGER'</code></td>
+                      <td><code>Yes</code></td>
+                      <td><code>The ID of the destination being reviewed</code></td>
+                    </tr>
+                    <tr>
+                      <td scope="row"><code>'wisata_rating'</code></td>
+                      <td><code>'DOUBLE'</code></td>
+                      <td><code>Yes</code></td>
+                      <td><code>The rating given to the destination</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </li>
+              <li>
+                Response Format =
+                <ol class="c">
+                  <li>
+                    If Response Success :
+                    <pre><code>{
+                      "user_wisata": "1",
+                      "wisata_id": "5",
+                      "wisata_rating": "3.3"
+                  }</code></pre>
+                  </li>
+                  <li>If Response Fail : <code>"msg": "Internal Server Error"</code></li>
+                </ol>
+              </li>
+            </ul>
+          </section>
+
+          <hr class="divider" />
+
+          <section id="updateReview">
+            <h2>updateReview</h2>
+            <p class="text-4">
+              Update an existing review.
+            </p>
+            <ul>
+              <li>URL = <code>'/destination/review/update/:user_wisata/:wisata_id'</code></li>
+              <li>Method = <code>PUT</code></li>
+              <li>
+                Request Body =
+                <table class="table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">Parameter</th>
+                      <th scope="col">Type</th>
+                      <th scope="col">Required</th>
+                      <th scope="col">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td scope="row"><code>'wisata_rating'</code></td>
+                      <td><code>'DOUBLE'</code></td>
+                      <td><code>Yes</code></td>
+                      <td><code>The rating given to the destination</code></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </li>
+              <li>
+                Response Format =
+                <ol class="c">
+                  <li>
+                    If Response Success :
+                    <pre><code>{
+                      "msg": "Review updated successfully"
+                  }</code></pre>
+                  </li>
+                  <li>If there is no review : <code>{
+                    "msg": "Review not found"
+                }</code></li>
+                  <li>If Response Fail : <code>"msg": "Internal Server Error"</code></li>
+                </ol>
+              </li>
+            </ul>
+          </section>
+
+          <hr class="divider" />
+
+          <section id="deleteReview">
+            <h2>deleteReview</h2>
+            <p class="text-4">
+              Delete a review by the user and destination ID.
+            </p>
+            <ul>
+              <li>URL = <code>'/destination/review/delete/:user_wisata/:wisata_id'</code></li>
+              <li>Method = <code>DELETE</code></li>
+              <li>
+                Response Format =
+                <ol class="c">
+                  <li>
+                    If Response Success :
+                    <code>{
+                      "msg": "Review deleted successfully"
+                  }</code>
+                  </li>
+                  <li>If there is no reviee : 
+                    <code>{
+                      "msg": "Review not found"
+                  }</code>
+                  </li>
+                  <li>If Response Fail : <code>"msg": "Internal Server Error"</code></li>
                 </ol>
               </li>
             </ul>
